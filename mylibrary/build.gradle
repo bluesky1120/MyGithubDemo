@@ -34,3 +34,22 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
+
+apply plugin: 'com.novoda.bintray-release'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
+
+publish {
+    userOrg = 'bluesky1120'
+    groupId = 'com.sky.mylibrary'
+    artifactId = 'permissionx'
+    publishVersion = '1.0.0'
+    desc = 'just for fun.'
+    website = 'http://github.com/bluesky1120/MyGithubDemo'
+}
